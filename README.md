@@ -21,4 +21,4 @@ This project provides the front-end UI for browsing, viewing, and purchasing col
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/card-store-ui.git
+git clone https://github.com/FelipeAAlbuquerque/Store-App-UI
