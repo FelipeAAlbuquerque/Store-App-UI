@@ -12,7 +12,7 @@ This project provides the front-end UI for browsing, viewing, and purchasing col
 
 ## Tech Stack
 
-- React (or your preferred framework)
+- React
 - HTML/CSS
 - JavaScript
 
