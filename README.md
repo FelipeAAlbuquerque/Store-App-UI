@@ -1,13 +1,13 @@
-# Card Store UI
+# Sticker Store UI
 
-A simple user interface for a Card Store application.  
-This project provides the front-end UI for browsing, viewing, and purchasing collectible cards.
+A simple user interface for a Sticker Store application.  
+This project provides the front-end UI for browsing, viewing, and purchasing collectible stickers.
 
 ## Features
 
-- Browse card catalog
-- View card details
-- Add cards to cart
+- Browse sticker catalog
+- View sticker details
+- Add sticker to cart
 - Responsive design
 
 ## Tech Stack
