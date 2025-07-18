@@ -1,9 +1,11 @@
-import Header from './Components/Header.jsx';
+import Header from './Components/header/Header.jsx';
+import Footer from './Components/footer/Footer.jsx';
 
 function App() {
-    return (
+    return (<>
         <Header/>
-    );
+        <Footer/>
+    </>);
 }
 
 export default App
