@@ -1,27 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
 
-:root {
-    --primary-color: #5B21B6;
-    --hover-color: #4C1D95;
-    --bg-light: #f7fafc;
-    --text-dark: #2d3748;
-    --border-color: #d1d5db;
-    --dark-border-color: #4b5563;
-    --shadow-color: rgba(0, 0, 0, 0.05);
-    --hover-shadow-color: rgba(0, 0, 0, 0.1);
-    --card-bg: #ffffff;
-    --dark-card-bg: #1f2937;
-    --padding-x: 24px;
-    --padding-y: 16px;
-    --font-family: "Josefin Sans", sans-serif;
-    --font-weight-bold: 700;
-    --font-size-lg: 1.125rem;
-}
+@import "tailwindcss";
 
-body {
-    font-family: var(--font-family);
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    margin: 0;
-    padding: 0;
+@theme {
+    --font-primary: "Josefin Sans";
+    --color-primary: #5B21B6;
+    --color-dark: #4C1D95;
+    --color-lighter: #F5F3FF;
+    --color-light: #DDD6FE;
 }
