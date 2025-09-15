@@ -1,5 +1,5 @@
 import PageHeading from "./heading/PageHeading.jsx";
-import ProductListings from "./products/ProductListings.jsx";
+import { ProductListings } from "./products/ProductListings.jsx";
 import { apiClient } from "../../api/apiClient.js";
 import { useState, useEffect } from "react";
 
