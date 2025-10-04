@@ -1,6 +1,6 @@
-import PageHeading from "./heading/PageHeading.jsx";
-import { ProductListings } from "./products/ProductListings.jsx";
-import { apiClient } from "../../api/apiClient.js";
+import { PageHeading } from "./heading/PageHeading";
+import { ProductListings } from "./products/ProductListings";
+import { apiClient } from "../../api/apiClient";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -45,7 +45,7 @@ export default function Home() {
 
   return (
     <div className="max-w-[1152px] mx-auto px-6 py-8">
-      <PageHeading title="Explore Stickers Store!">
+      <PageHeading title="Explore Eazy Stickers!">
         Add a touch of creativity to your space with our wide range of fun and
         unique stickers. Perfect for any occasion!
       </PageHeading>
