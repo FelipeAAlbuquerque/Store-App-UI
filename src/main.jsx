@@ -10,15 +10,16 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
-import About from "./Components/About/About.jsx";
-import Contact from "./Components/Contact/Contact.jsx";
-import Login from "./Components/Login/Login.jsx";
-import Cart from "./Components/Cart/Cart.jsx";
-import Home from "./Components/Home/Home.jsx";
-import { productsLoader } from "./Components/Home/Home.jsx";
-import ErrorPage from "./Components/Error/ErrorPage.jsx";
-import { contactAction } from "./Components/Contact/Contact.jsx";
-import ProductDetail from "./Components/Home/products/ProductDetail.jsx";
+import About from "./components/About/About.jsx";
+import Contact from "./components/Contact/Contact.jsx";
+import Login from "./components/Login/Login.jsx";
+import Cart from "./components/Cart/Cart.jsx";
+import Home from "./components/Home/Home.jsx";
+import ErrorPage from "./components/Error/ErrorPage.jsx";
+import { productsLoader } from "./components/Home/Home.jsx";
+import { contactAction } from "./components/Contact/Contact.jsx";
+import ProductDetail from "./components/Home/products/ProductDetail.jsx";
+import { CartProvider } from "./store/cart-context.jsx";
 
 const routeDefinitions = createRoutesFromElements(
   <Route path="/" element={<App />} errorElement={<ErrorPage />}>
@@ -36,7 +37,9 @@ const appRouter = createBrowserRouter(routeDefinitions);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={appRouter} />
+    <CartProvider>
+      <RouterProvider router={appRouter} />
+    </CartProvider>
     <ToastContainer
       position="top-center"
       autoClose={3000}
