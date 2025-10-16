@@ -1,5 +1,5 @@
-import { PageHeading } from "./heading/PageHeading";
-import { ProductListings } from "./products/ProductListings";
+import PageHeading from "./heading/PageHeading";
+import ProductListings from "./products/ProductListings";
 import { apiClient } from "../../api/apiClient";
 import { useLoaderData } from "react-router-dom";
 
@@ -18,11 +18,13 @@ export default function Home() {
 
 export async function productsLoader() {
   try {
-    const response = await apiClient.get("/products");
+    const response = await apiClient.get("/products"); // Axios GET Request
     return response.data;
   } catch (error) {
     throw new Response(
-      error.message || "Failed to fetch products. Please try again.",
+      error.response?.data?.errorMessage ||
+        error.message ||
+        "Failed to fetch products. Please try again.",
       { status: error.status || 500 }
     );
   }

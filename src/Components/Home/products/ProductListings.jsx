@@ -1,11 +1,11 @@
 import ProductCard from "./ProductCard.jsx";
 import { SearchBox } from "../controls/SearchBox.jsx";
 import { Dropdown } from "../controls/Dropdown.jsx";
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 
 const sortList = ["Popularity", "Price Low to High", "Price High to Low"];
 
-export function ProductListings({ products }) {
+export default function ProductListings({ products }) {
   const [searchText, setSearchText] = useState("");
   const [selectedSort, setSelectedSort] = useState("Popularity");
 
@@ -60,7 +60,7 @@ export function ProductListings({ products }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6 py-12">
         {filteredAndSortedProducts.length > 0 ? (
           filteredAndSortedProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.productId} product={product} />
           ))
         ) : (
           <p className="text-center font-primary font-bold text-lg text-primary">
