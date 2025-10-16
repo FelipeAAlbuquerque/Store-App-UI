@@ -7,9 +7,9 @@ import {
   useNavigate,
   useSubmit,
 } from "react-router-dom";
-import apiClient from "../api/apiClient";
+import { apiClient } from "../../api/apiClient";
 import { toast } from "react-toastify";
-import PageTitle from "./PageTitle";
+import PageTitle from "../Home/heading/PageTitle";
 
 export default function Register() {
   const actionData = useActionData();
