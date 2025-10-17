@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import apiClient from "../../api/apiClient";
+import { apiClient } from "../../api/apiClient";
 import {
   Form,
   useLoaderData,
@@ -8,9 +8,9 @@ import {
   useNavigate,
   replace,
 } from "react-router-dom";
-import PageTitle from "./PageTitle";
+import PageTitle from "../Home/heading/PageTitle";
 import { toast } from "react-toastify";
-import { useAuth } from "../store/auth-context";
+import { useAuth } from "../../store/auth-context";
 
 export default function Profile() {
   const initialProfileData = useLoaderData();
