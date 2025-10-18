@@ -290,7 +290,7 @@ export default function Profile() {
 
 export async function profileLoader() {
   try {
-    const response = await apiClient.get("/profile");
+    const response = await apiClient.get("/profile"); // Axios GET Request
     return response.data;
   } catch (error) {
     throw new Response(

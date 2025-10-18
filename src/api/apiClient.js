@@ -9,7 +9,6 @@ export const apiClient = axios.create({
   timeout: 10000,
 });
 
-
 apiClient.interceptors.request.use(
   async (config) => {
     const jwtToken = localStorage.getItem("jwtToken");
