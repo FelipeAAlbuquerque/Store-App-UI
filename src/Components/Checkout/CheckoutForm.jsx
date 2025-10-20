@@ -9,7 +9,7 @@ import {
   CardExpiryElement,
   CardCvcElement,
 } from "@stripe/react-stripe-js";
-import { useNavigate, useNavigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import PageTitle from "../Home/heading/PageTitle";
 import { toast } from "react-toastify";
 
