@@ -4,7 +4,6 @@ import { apiClient } from "../../api/apiClient";
 import { useActionData, useNavigation, useSubmit } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import { toast } from "react-toastify";
-import { redirect } from "react-router-dom";
 
 export default function Contact() {
   const actionData = useActionData();
