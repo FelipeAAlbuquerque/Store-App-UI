@@ -33,7 +33,7 @@ import Profile, {
 } from "./components/Profile/Profile.jsx";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
-import OrderSuccess from "./components/OrderSuccess.jsx";
+import OrderSuccess from "./components/Orders/OrderSuccess.jsx";
 
 const stripePromise = loadStripe(
   "pk_test_51RJQvF4PbYqEP0SGCcnUiXIBFtwmjlfv7CvYdwgLRyrs3pLxejSAYED3goAAkxwKVkgP70GvS0LkzhIHWSfpHWYE00jR1SrCza"

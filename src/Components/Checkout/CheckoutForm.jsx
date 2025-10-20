@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "../../store/auth-context";
-import apiClient from "../../api/apiClient";
+import { apiClient } from "../../api/apiClient";
 import { useCart } from "../../store/cart-context";
 import {
   useStripe,

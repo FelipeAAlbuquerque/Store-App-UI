@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { orderSuccessImg } from "../../assets/util/order-confirmed.png";
-import { PageTitle } from "../Home/heading/PageTitle";
+import orderSuccessImg from "../../assets/util/order-confirmed.png";
+import PageTitle from "../Home/heading/PageTitle";
 
 export default function OrderSuccess() {
   return (
