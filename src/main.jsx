@@ -61,9 +61,17 @@ const routeDefinitions = createRoutesFromElements(
           return !actionResult?.success;
         }}
       />
-      <Route path="/orders" element={<Orders />} />
-      <Route path="/admin/orders" element={<AdminOrders />} />
-      <Route path="/admin/messages" element={<Messages />} />
+      <Route path="/orders" element={<Orders />} loader={ordersLoader} />
+      <Route
+        path="/admin/orders"
+        element={<AdminOrders />}
+        loader={adminOrdersLoader}
+      />
+      <Route
+        path="/admin/messages"
+        element={<Messages />}
+        loader={messagesLoader}
+      />
     </Route>
   </Route>
 );
