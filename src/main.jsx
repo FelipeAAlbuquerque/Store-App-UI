@@ -23,7 +23,7 @@ import { CartProvider } from "./store/cart-context.jsx";
 import { AuthProvider } from "./store/auth-context.jsx";
 import CheckoutForm from "./components/Checkout/CheckoutForm.jsx";
 import ProtectedRoute from "./components/Login/ProtectedRoute.jsx";
-import Orders from "./components/Orders/Orders.jsx";
+import Orders, { ordersLoader } from "./components/Orders/Orders.jsx";
 import AdminOrders, {
   adminOrdersLoader,
 } from "./components/admin/AdminOrders.jsx";
