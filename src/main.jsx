@@ -27,7 +27,7 @@ import Orders, { ordersLoader } from "./components/Orders/Orders.jsx";
 import AdminOrders, {
   adminOrdersLoader,
 } from "./components/admin/AdminOrders.jsx";
-import Messages from "./components/admin/Messages.jsx";
+import Messages, { messagesLoader } from "./components/admin/Messages.jsx";
 import Register, { registerAction } from "./components/Register/Register.jsx";
 import Profile, {
   profileAction,
