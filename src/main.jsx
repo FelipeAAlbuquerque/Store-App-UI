@@ -24,7 +24,9 @@ import { AuthProvider } from "./store/auth-context.jsx";
 import CheckoutForm from "./components/Checkout/CheckoutForm.jsx";
 import ProtectedRoute from "./components/Login/ProtectedRoute.jsx";
 import Orders from "./components/Orders/Orders.jsx";
-import AdminOrders from "./components/admin/AdminOrders.jsx";
+import AdminOrders, {
+  adminOrdersLoader,
+} from "./components/admin/AdminOrders.jsx";
 import Messages from "./components/admin/Messages.jsx";
 import Register, { registerAction } from "./components/Register/Register.jsx";
 import Profile, {
