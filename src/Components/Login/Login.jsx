@@ -7,21 +7,24 @@ import {
   useNavigation,
   useNavigate,
 } from "react-router-dom";
-import { useAuth } from "../../store/auth-context";
 import { toast } from "react-toastify";
 import { apiClient } from "../../api/apiClient";
+import { useDispatch } from "react-redux";
+import { loginSuccess } from "../../store/auth-slice";
 
 export default function Login() {
   const actionData = useActionData();
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
   const navigate = useNavigate();
-  const { loginSuccess } = useAuth();
+  const dispatch = useDispatch();
   const from = sessionStorage.getItem("redirectPath") || "/home";
 
   useEffect(() => {
     if (actionData?.success) {
-      loginSuccess(actionData.jwtToken, actionData.user);
+      dispatch(
+        loginSuccess({ jwtToken: actionData.jwtToken, user: actionData.user })
+      );
       sessionStorage.removeItem("redirectPath");
       setTimeout(() => {
         navigate(from);
