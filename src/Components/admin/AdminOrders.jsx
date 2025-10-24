@@ -1,6 +1,6 @@
 import { useLoaderData, useRevalidator } from "react-router-dom";
 import PageTitle from "../Home/heading/PageTitle";
-import apiClient from "../../api/apiClient";
+import { apiClient } from "../../api/apiClient";
 import { toast } from "react-toastify";
 
 export default function AdminOrders() {

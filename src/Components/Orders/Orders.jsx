@@ -1,4 +1,4 @@
-import apiClient from "../../api/apiClient";
+import { apiClient } from "../../api/apiClient";
 import { useLoaderData } from "react-router-dom";
 import PageTitle from "../Home/heading/PageTitle";
 
