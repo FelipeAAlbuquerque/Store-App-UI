@@ -9,7 +9,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../store/cart-slice";
+import { addToCart } from "../../../store/cart-slice.js";
 
 export default function ProductDetail() {
   const location = useLocation();

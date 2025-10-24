@@ -11,7 +11,7 @@ import {
   Route,
 } from "react-router-dom";
 import About from "./components/About/About.jsx";
-import Contact from "./components/Contact/Contact.jsx";
+import Contact, { contactLoader } from "./components/Contact/Contact.jsx";
 import Login, { loginAction } from "./components/Login/Login.jsx";
 import Cart from "./components/Cart/Cart.jsx";
 import Home from "./components/Home/Home.jsx";
@@ -19,8 +19,6 @@ import ErrorPage from "./components/Error/ErrorPage.jsx";
 import { productsLoader } from "./components/Home/Home.jsx";
 import { contactAction } from "./components/Contact/Contact.jsx";
 import ProductDetail from "./components/Home/products/ProductDetail.jsx";
-import { CartProvider } from "./store/cart-context.jsx";
-import { AuthProvider } from "./store/auth-context.jsx";
 import CheckoutForm from "./components/Checkout/CheckoutForm.jsx";
 import ProtectedRoute from "./components/Login/ProtectedRoute.jsx";
 import Orders, { ordersLoader } from "./components/Orders/Orders.jsx";
@@ -36,6 +34,8 @@ import Profile, {
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import OrderSuccess from "./components/Orders/OrderSuccess.jsx";
+import store from "./store/store.js";
+import { Provider } from "react-redux";
 
 const stripePromise = loadStripe(
   "pk_test_51RJQvF4PbYqEP0SGCcnUiXIBFtwmjlfv7CvYdwgLRyrs3pLxejSAYED3goAAkxwKVkgP70GvS0LkzhIHWSfpHWYE00jR1SrCza"

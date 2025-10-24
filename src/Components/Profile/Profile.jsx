@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import PageTitle from "../Home/heading/PageTitle";
 import { toast } from "react-toastify";
-import { loginSuccess, logout } from "../store/auth-slice";
+import { loginSuccess, logout } from "../../store/auth-slice.js";
 import { useDispatch } from "react-redux";
 
 export default function Profile() {

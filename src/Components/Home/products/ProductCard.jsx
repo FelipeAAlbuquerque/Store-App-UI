@@ -1,6 +1,6 @@
 import Price from "./Price.jsx";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../store/cart-slice.js";
+import { addToCart } from "../../../store/cart-slice.js";
 import { Link } from "react-router-dom";
 
 export default function ProductCard({ product }) {
