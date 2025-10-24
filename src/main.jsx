@@ -46,7 +46,12 @@ const routeDefinitions = createRoutesFromElements(
     <Route index element={<Home />} loader={productsLoader} />
     <Route path="/home" element={<Home />} loader={productsLoader} />
     <Route path="/about" element={<About />} />
-    <Route path="/contact" element={<Contact />} action={contactAction} />
+    <Route
+      path="/contact"
+      element={<Contact />}
+      action={contactAction}
+      loader={contactLoader}
+    />
     <Route path="/login" element={<Login />} action={loginAction} />
     <Route path="/register" element={<Register />} action={registerAction} />
     <Route path="/cart" element={<Cart />} />
@@ -83,11 +88,9 @@ const appRouter = createBrowserRouter(routeDefinitions);
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Elements stripe={stripePromise}>
-      <AuthProvider>
-        <CartProvider>
-          <RouterProvider router={appRouter} />
-        </CartProvider>
-      </AuthProvider>
+      <Provider store={store}>
+        <RouterProvider router={appRouter} />
+      </Provider>
       <ToastContainer
         position="top-center"
         autoClose={3000}
